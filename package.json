@@ -33,7 +33,8 @@
   },
   "main": "./lib/runner.js",
   "scripts": {
-    "test": "make ci"
+    "test": "make ci",
+    "test:only": "make test"
   },
   "files": [
     "lib"
