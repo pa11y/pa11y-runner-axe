@@ -156,7 +156,10 @@ describe('lib/runner', () => {
 
 		it('runs aXe', () => {
 			assert.calledOnce(global.window.axe.run);
-			assert.calledWithExactly(global.window.axe.run);
+			assert.calledWithExactly(
+				global.window.axe.run,
+				global.window.document
+			);
 		});
 
 		it('resolves with processed and normalised issues', () => {
@@ -246,6 +249,24 @@ describe('lib/runner', () => {
 					}
 				}
 			]);
+		});
+
+		describe('when passing the Pa11y option', () => {
+			describe('rootElement', () => {
+				const cssSelector = '#main';
+
+				beforeEach(async () => {
+					options.rootElement = cssSelector;
+					await runner.run(options, pa11y);
+				});
+
+				it('sets the aXe context', () => {
+					assert.calledWithExactly(
+						global.window.axe.run,
+						cssSelector
+					);
+				});
+			});
 		});
 
 		describe('when aXe errors', () => {
