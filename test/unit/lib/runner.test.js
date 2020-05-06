@@ -310,6 +310,24 @@ describe('lib/runner', () => {
 					);
 				});
 			});
+
+			describe('rules', () => {
+				beforeEach(async () => {
+					options.rules = ['color-contrast', 'autocomplete-valid'];
+					await runner.run(options, pa11y);
+				});
+
+				it('sets the aXe rules', () => {
+					assert.calledWithExactly(
+						global.window.axe.run,
+						sinon.match.any,
+						sinon.match.has('rules', {
+							'color-contrast': {enabled: true},
+							'autocomplete-valid': {enabled: true}
+						})
+					);
+				});
+			});
 		});
 
 		describe('when aXe errors', () => {
