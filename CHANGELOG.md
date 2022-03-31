@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.1 (2022-03-31)
+
+* Deprecate package
+
 ## 2.0.0 (2020-04-27)
 
 * Drop support for Node.js versions older than 10.

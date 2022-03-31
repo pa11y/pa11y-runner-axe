@@ -1,5 +1,7 @@
 # Pa11y aXe Runner
 
+⚠️ This package is now bundled with pa11y. You can find the latest version [in the pa11y repo](https://github.com/pa11y/pa11y/blob/master/lib/runners/axe.js). ⚠️
+
 An [aXe](https://www.axe-core.org/) runner for [Pa11y](https://github.com/pa11y/pa11y).
 
 [![NPM version][shield-npm]][info-npm]
@@ -8,6 +10,7 @@ An [aXe](https://www.axe-core.org/) runner for [Pa11y](https://github.com/pa11y/
 
 ## Table of contents
 
+* [Table of contents](#table-of-contents)
 * [Requirements](#requirements)
   * [Compatibility chart](#compatibility-chart)
 * [Usage](#usage)
@@ -68,7 +71,7 @@ Copyright &copy; 2018, Team Pa11y
 
 [info-license]: LICENSE
 [info-npm]: https://www.npmjs.com/package/pa11y-runner-axe
-[info-build]: https://travis-ci.org/pa11y/pa11y-runner-axe
+[info-build]: https://github.com/pa11y/pa11y-runner-axe/actions/workflows/tests.yml/badge.svg
 [shield-license]: https://img.shields.io/badge/license-LGPL%203.0-blue.svg
 [shield-npm]: https://img.shields.io/npm/v/pa11y-runner-axe.svg
 [shield-build]: https://img.shields.io/travis/pa11y/pa11y-runner-axe/master.svg
